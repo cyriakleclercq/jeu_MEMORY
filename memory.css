@@ -1,0 +1,42 @@
+body {
+    background: #1c7430;
+    color: #0DFF5F;
+}
+
+header {
+    background: #E8B60C ;
+}
+
+h1 {
+    font-weight: bold;
+    color: #B00CE8;
+}
+
+#section1G {
+    display: flex;
+    justify-content: space-around;
+}
+
+#section1D {
+    border: solid #FF0000;
+    border-radius: 30px;
+}
+
+img {
+    width: 15%;
+}
+
+#choix_joueur {
+    display: flex;
+    justify-content: center;
+}
+
+#section_timer {
+    border: solid #FF0000;
+    border-radius: 30px;
+}
+
+#victoire {
+    font-size: 30px;
+    font-weight: bold;
+}
