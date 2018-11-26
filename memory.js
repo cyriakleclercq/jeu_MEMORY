@@ -37,7 +37,6 @@ var img5 = document.getElementById("img5");
 var img6 = document.getElementById("img6");
 
 
-
 var tableau1 = [img1, img2, img3, img4, img5, img6];
 
 var tableau2 = [];
@@ -68,8 +67,13 @@ console.log(tableau2);
 
 }
 
-// valeur des span
+var ab = document.getElementById("img1");
 
+var img1 = document.createElement("img");
+ab.appendChild(img1);
+
+img1.src = "OZHk.png";
+img1.style.width = "15%";
 
 
 

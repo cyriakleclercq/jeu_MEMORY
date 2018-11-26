@@ -22,10 +22,6 @@ h1 {
     border-radius: 30px;
 }
 
-img {
-    width: 15%;
-}
-
 #choix_joueur {
     display: flex;
     justify-content: center;
