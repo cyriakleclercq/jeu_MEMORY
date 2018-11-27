@@ -1,15 +1,15 @@
 
-
-
 /*
+
+ */
+
+
 //            ------------decompte function---------------a
 
 // innit variable
 
-var s = 5;
+var s = 25;
 var clear;
-var seconds = document.getElementById("timer").innerHTML;
-
 
 // init timer
 
@@ -22,11 +22,28 @@ function decompte() {
         clear = setTimeout(decompte,1000);
 
     if (s < 0 ) {
-        clearTimeout(clear)
+
+        clearTimeout(clear);
+
+        document.getElementById("page1").style.display = "none";
+        document.getElementById("page2").style.display = "block";
+
+        document.getElementById("resultat").innerHTML = "YOU LOSE";
+        document.getElementById("nbr_paire").innerHTML = bonne_rep;
+
+        setTimeout(rejouer, 3000);
+
+    }
+
+    if (bonne_rep == 3){
+
+        setTimeout(rejouer, 3000);
+
     }
 }
 setTimeout(decompte, 1000);
 
+/*
 // init  table
 
 var tableau1 = [0, 1, 2, 3, 4, 5];
@@ -116,9 +133,8 @@ function majAffichage(noCarte) {
 
 function rejouer(){
 
-    document.getElementById("victoire").innerHTML = " WELL PLAYED";
-
     location.reload();
+
 
 }
 
@@ -133,10 +149,16 @@ function initialiseJeu(){
         recto_carte[position] = recto_carte[hasard];
 
         recto_carte[hasard] = sauve;
+
+        document.getElementById("page1").style.display = "block";
+        document.getElementById("page2").style.display = "none";
+
     }
 }
 
 function controleJeu(noCarte){
+
+
 
     if(choix.length<2){
 
@@ -158,13 +180,14 @@ function controleJeu(noCarte){
                 nouveauEtat=-1;
 
                 bonne_rep ++;
+                document.getElementById("nbr_paire").innerHTML = bonne_rep;
             }
 
             tableau1[choix[0]] = nouveauEtat;
 
             tableau1[choix[1]] = nouveauEtat;
 
-            setTimeout(function(){
+            setTimeout(function() {
 
                 majAffichage(choix[0]);
 
@@ -174,14 +197,15 @@ function controleJeu(noCarte){
 
                 if(bonne_rep == 3){
 
-                    rejouer();
+                    document.getElementById("page1").style.display = "none";
+                    document.getElementById("page2").style.display = "block";
+
+                    document.getElementById("resultat").innerHTML = " WELL PLAYED";
 
                 }
             },1000);
         }
     }
 }
-
-
 
 

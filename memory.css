@@ -38,5 +38,15 @@ h1 {
 }
 
 section img {
-    width: 15%;
+    width: 10%;
+}
+
+#aa {
+    display: flex;
+    justify-content: right;
+    font-size: 30px;
+}
+
+#resu {
+    font-size: 50px;
 }
