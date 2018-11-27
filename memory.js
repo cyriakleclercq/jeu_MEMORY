@@ -17,9 +17,11 @@ function decompte() {
 
     clearTimeout(clear);
 
-        document.getElementById("timer").innerHTML = s --;
+        document.getElementById("time").innerHTML = "Timer" + " " + ":" + " " + s--;
 
         clear = setTimeout(decompte,1000);
+
+// compare second to win or lose
 
     if (s < 0 ) {
 
@@ -93,16 +95,23 @@ while (tableau1.length) {
 }
 */
 
+// init table + variable ( 6 picture, 6 element)
+
 var recto_carte = [0,0,1,1,2,2];
 
 var tableau1 = [0,0,0,0,0,0 ];
 
 var choix = [];
 
+// display the good answer
+
 var bonne_rep = 0;
+
+// select all picture element on the section1G
 
 var imgCartes = document.getElementById("section1G").getElementsByTagName("img");
 
+// roam on the table "img", attribute a onclick function, the function call "controle jeu" with the number of  picture
 for (i = 0; i < imgCartes.length; i++){
 
     imgCartes[i].noCarte=i;
@@ -113,23 +122,38 @@ for (i = 0; i < imgCartes.length; i++){
     }
 }
 
+// call the function and mix the cards
+
 initialiseJeu();
+
+// display the recto card when the card is clicked
 
 function majAffichage(noCarte) {
 
 
     switch (tableau1[noCarte]) {
+
+// display the verso card
+
         case 0:
             imgCartes[noCarte].src = "dos_de_carte.png";
             break;
+
+// the pattern of the picture
+
         case 1:
             imgCartes[noCarte].src = "carte" + recto_carte[noCarte] + ".png";
             break;
+
+// the card is hidden
+
         case -1:
             imgCartes[noCarte].style.visibility = "hidden";
             break;
     }
 }
+
+// function replay
 
 function rejouer(){
 
@@ -138,9 +162,11 @@ function rejouer(){
 
 }
 
+// function initialise the game + mixed the table elements
+
 function initialiseJeu(){
 
-    for (var position = recto_carte.length - 1; position >= 1; position-- ){
+    for ( var position = recto_carte.length - 1; position >= 1; position-- ){
 
         var hasard = Math.floor(Math.random()*(position+1));
 
@@ -156,20 +182,30 @@ function initialiseJeu(){
     }
 }
 
+
 function controleJeu(noCarte){
 
 
+// prevent if the user click more than twice
 
     if(choix.length<2){
+
+// pass the card 0 to 1
 
         if(tableau1[noCarte]==0){
 
             tableau1[noCarte]=1;
 
+// push the table number on the "choix" table
+
             choix.push(noCarte);
+
+// maj the display
 
             majAffichage(noCarte);
         }
+
+// verify if the user choice 2 cards
 
         if(choix.length==2){
 
@@ -177,7 +213,11 @@ function controleJeu(noCarte){
 
             if(recto_carte[choix[0]] == recto_carte[choix[1]]){
 
+// remove the cards
+
                 nouveauEtat=-1;
+
+// incremente the "bonne_rep" variable
 
                 bonne_rep ++;
                 document.getElementById("nbr_paire").innerHTML = bonne_rep;
@@ -189,11 +229,15 @@ function controleJeu(noCarte){
 
             setTimeout(function() {
 
+// maj the display
+
                 majAffichage(choix[0]);
 
                 majAffichage(choix[1]);
 
                 choix=[];
+
+// if you have all good answer, display the result
 
                 if(bonne_rep == 3){
 
@@ -203,6 +247,9 @@ function controleJeu(noCarte){
                     document.getElementById("resultat").innerHTML = " WELL PLAYED";
 
                 }
+
+// countdown 1s
+
             },1000);
         }
     }

@@ -10,6 +10,7 @@ header {
 h1 {
     font-weight: bold;
     color: #B00CE8;
+
 }
 
 #section1G {
@@ -43,7 +44,8 @@ section img {
 
 #aa {
     display: flex;
-    justify-content: right;
+    justify-content: center;
+    align-items: center;
     font-size: 30px;
 }
 
