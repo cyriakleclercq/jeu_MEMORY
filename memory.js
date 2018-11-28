@@ -50,6 +50,9 @@ var limite = 0;
 
 var nbr_paire = 0;
 
+document.getElementById("page1").style.display = "block";
+document.getElementById("page2").style.display = "none";
+
 
 // mise en place des event //
 
