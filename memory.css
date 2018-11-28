@@ -1,6 +1,10 @@
+
+
 body {
     background: #1c7430;
     color: #0DFF5F;
+    padding: 0;
+    margin: 0;
 }
 
 header {
@@ -51,4 +55,15 @@ section img {
 
 #resu {
     font-size: 50px;
+}
+
+#replay {
+    width: 5%;
+}
+
+#div {
+    display: flex;
+    justify-content: center;
+
+
 }
