@@ -4,10 +4,14 @@ body {
     background: #1c7430;
     width: auto;
     color: #0DFF5F;
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
+.row {
+    margin: 0 !important;
+    padding: 0 !important;
+}
 header {
     background: #E8B60C ;
 }
@@ -18,9 +22,14 @@ h1 {
 
 }
 
+#replay {
+    width: 6vw !important;
+}
+
 #section1G {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin: auto;
 }
 
 #section1D {
@@ -72,7 +81,7 @@ section img {
 
 
 
-@media (max-width: 640px) {
+@media (max-width: 600px) {
     * {
         box-sizing: border-box;
     }
@@ -90,12 +99,13 @@ section img {
     embed,
     video {
         max-width: 100%;
+
     }
 
     img {
         height: auto;
-    }
 
+    }
 
     textarea,
     table,
@@ -126,19 +136,10 @@ section img {
         display: none !important;
     }
 
-
-    body:before {
-        content: "Version mobile du jeu MEMORY";
-        display: block;
-        text-align: center;
-        font-style: italic;
-        color: #777;
-    }
-}
-
-@media (max-device-width:768px) and (orientation: landscape) {
-    html {
-        -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
+    @media (max-device-width: 700px) and (orientation: landscape) {
+        html {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
     }
 }

@@ -36,7 +36,6 @@ while (tableau1.length) {
 
 }
 
-console.log(tableau2);
 
 // table to compare the user choice
 var tableau3 = [];
@@ -76,14 +75,22 @@ for (let i = 0; i < tableau2.length; i++) {
 
                 tableau4.push(t_test[i]);
                 tableau3.push(tableau2[i]);
-                console.log(tableau4);
+
+                if (tableau4[0] == tableau4[1]) {
+                    bad_answer();
+                    limite = 0;
+                    tableau3 = [];
+
+                }
             }
 
         setTimeout (function() {
 
             // compare the value of "tableau3" //
 
+
             // if value of "tableau3" is equal
+
 
             if (tableau3[0] == tableau3[1] && tableau3.length == 2  && tableau4[0] != tableau4[1]) {
 
@@ -198,7 +205,7 @@ function decompte() {
         document.getElementById("resultat").innerHTML = " WELL PLAYED";
 
         // delay the retry
-        setTimeout(rejouer, 3000);
+        setTimeout(rejouer, 1000);
 
     }
 }
