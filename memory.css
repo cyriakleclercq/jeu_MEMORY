@@ -2,6 +2,7 @@
 
 body {
     background: #1c7430;
+    width: auto;
     color: #0DFF5F;
     padding: 0;
     margin: 0;
@@ -24,7 +25,7 @@ h1 {
 
 #section1D {
     border: solid #FF0000;
-    border-radius: 30px;
+    border-radius:  3vw;
 }
 
 #choix_joueur {
@@ -34,11 +35,11 @@ h1 {
 
 #section_timer {
     border: solid #FF0000;
-    border-radius: 30px;
+    border-radius: 3vw;
 }
 
 #victoire {
-    font-size: 30px;
+    font-size:  3vw;
     font-weight: bold;
 }
 
@@ -51,11 +52,11 @@ section img {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size:  3vw;
 }
 
 #resu {
-    font-size: 50px;
+    font-size: 3.125vw;
 }
 
 #replay {
@@ -65,6 +66,79 @@ section img {
 #div {
     display: flex;
     justify-content: center;
+    padding-bottom: 5%;
+
+}
 
 
+
+@media (max-width: 640px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    img,
+    table,
+    td,
+    blockquote,
+    code,
+    pre,
+    textarea,
+    input,
+    iframe,
+    object,
+    embed,
+    video {
+        max-width: 100%;
+    }
+
+    img {
+        height: auto;
+    }
+
+
+    textarea,
+    table,
+    td,
+    th,
+    code,
+    pre,
+    samp {
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+        word-wrap: break-word;
+    }
+
+    code,
+    pre,
+    samp {
+        white-space: pre-wrap;
+    }
+
+    .element1,
+    .element2 {
+        float: none;
+        width: auto;
+    }
+
+    .hide_mobile {
+        display: none !important;
+    }
+
+
+    body:before {
+        content: "Version mobile du jeu MEMORY";
+        display: block;
+        text-align: center;
+        font-style: italic;
+        color: #777;
+    }
+}
+
+@media (max-device-width:768px) and (orientation: landscape) {
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
 }
