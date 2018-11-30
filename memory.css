@@ -12,14 +12,19 @@ body {
     margin: 0 !important;
     padding: 0 !important;
 }
+
 header {
     background: #E8B60C ;
 }
 
-h1 {
+#titre {
     font-weight: bold;
     color: #B00CE8;
 
+}
+
+#time {
+    font-size: 2vw;
 }
 
 #replay {
@@ -27,6 +32,12 @@ h1 {
 }
 
 #section1G {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+#section1G2 {
     display: flex;
     justify-content: space-evenly;
     margin: auto;
@@ -53,7 +64,7 @@ h1 {
 }
 
 section img {
-    width: 12%;
+    width: 8%;
     height: 90%;
 }
 
@@ -65,7 +76,7 @@ section img {
 }
 
 #resu {
-    font-size: 3.125vw;
+    font-size: 2.125vw;
 }
 
 #replay {
@@ -82,64 +93,22 @@ section img {
 
 
 @media (max-width: 600px) {
-    * {
-        box-sizing: border-box;
-    }
 
-    img,
-    table,
-    td,
-    blockquote,
-    code,
-    pre,
-    textarea,
-    input,
-    iframe,
-    object,
-    embed,
-    video {
-        max-width: 100%;
-
-    }
-
-    img {
-        height: auto;
-
-    }
-
-    textarea,
-    table,
-    td,
-    th,
-    code,
-    pre,
-    samp {
-        -webkit-hyphens: auto;
-        -moz-hyphens: auto;
-        hyphens: auto;
-        word-wrap: break-word;
-    }
-
-    code,
-    pre,
-    samp {
-        white-space: pre-wrap;
-    }
-
-    .element1,
-    .element2 {
-        float: none;
-        width: auto;
-    }
-
-    .hide_mobile {
-        display: none !important;
-    }
-
-    @media (max-device-width: 700px) and (orientation: landscape) {
-        html {
-            -webkit-text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
-        }
+    #bb img {
+        width: 18%;
     }
 }
+
+
+@media (max-device-width: 800px) and (orientation: landscape) {
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+
+        }
+    #bb img {
+        width: 12%;
+    }
+}
+
+

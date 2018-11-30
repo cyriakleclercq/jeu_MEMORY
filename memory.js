@@ -2,10 +2,10 @@
 
 // initializes the table
 
-var tableau1 = ["0", "0", "1", "1", "2", "2"];
+var tableau1 = ["0", "0", "1", "1", "2", "2", "3", "3", "4", "4", "5", "5"];
 
 // table to find the right position on the card clicked
-var t_test = ["0","1","2","3","4","5"];
+var t_test = ["0","1","2","3","4","5","6","7","8","9","10","11"];
 
 var tableau2 = [];
 
@@ -35,7 +35,8 @@ while (tableau1.length) {
     tableau1.splice(calc,1);
 
 }
-
+console.log(tableau1);
+console.log(tableau2);
 
 // table to compare the user choice
 var tableau3 = [];
@@ -116,7 +117,7 @@ for (let i = 0; i < tableau2.length; i++) {
 
         // condition to win
 
-        if (nbr_paire == 3){
+        if (nbr_paire == 6){
 
             //display the result
             document.getElementById("nbr_paire").innerHTML = nbr_paire;
@@ -158,7 +159,7 @@ function bad_answer() {
 
 
 
-var s = 15;
+var s = 30;
 var clear;
 
 // countdown function
@@ -191,7 +192,7 @@ function decompte() {
     }
 
     // if the user win
-    if(nbr_paire == 3){
+    if(nbr_paire == 6){
 
         //stop the timer
         clearTimeout(clear);
