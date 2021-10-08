@@ -159,7 +159,7 @@ function bad_answer() {
 
 
 
-var s = 50;
+var s = 30;
 var clear;
 
 // countdown function
